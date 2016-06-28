@@ -17,11 +17,10 @@
   - 行為驅動執行
   - 路由給真正的請求處理程序
   - 讓請求處理程序作出回應
-  - 不好的實現方式
-  - Blocking與Non-Blocking
-  - 以Non-Blocking操作進行請求回應
+  - Blocking 與 Non-Blocking
+  - 以 Non-Blocking 操作進行請求回應
   - 更有用的場景
-  - 處理POST請求
+  - 處理 POST 請求
   - 處理檔案上傳
 
 - [git](./git/README.md)
