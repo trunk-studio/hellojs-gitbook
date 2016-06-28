@@ -15,7 +15,10 @@
 
 ## 編寫注意事項
 
-1. 每一章節都為一個 folder，如 contribute folder
+1. 每一章節都為一個 folder，如 contribute folder，每一個章節都會有一個 `README.md` 撰寫章節內容
+
+  ![](./tree.png)
+
 2. 圖片請分章節放，一律放在每一章節的資料夾下，放置圖片語法 `![](./yourimage.jpg)`
 
 
