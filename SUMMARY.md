@@ -52,12 +52,18 @@
 
 - Node.js 進階
   - 基礎 MVC 架構說明
-  - Sails 使用，以使用者增修改查為例
-    - sequelize 資料庫操作
+  - sequelize 資料庫操作
+  - Sails
+    - 框架介紹
+    - 實戰：以使用者增修改查為例
+    - model 定義
+    - Service 定義
     - Controller 定義
     - route 定義
     - jade/pug 使用
     - 測試撰寫
-  - Koa 使用，以使用者增修改查為例
+  - Koa
+    - 框架介紹
+    - 實戰：以使用者增修改查為例
 
 - [參考資料](./reference/README.md)
