@@ -35,25 +35,29 @@
 
 - Node.js 入門  
 
-  - 建構應用的模組
-  - 伺服器是如何處理請求的
-  - 伺服器端的模組放在哪裡
-  - 如何來進行請求的 "路由"
-  - 行為驅動執行
-  - 路由給真正的請求處理程序
-  - 讓請求處理程序作出回應
-  - Blocking 與 Non-Blocking
-  - 以 Non-Blocking 操作進行請求回應
-  - 更有用的場景
-  - 處理 POST 請求
-  - 處理檔案上傳
+  - A basic HTTP server: 一個基礎的HTTP伺服器
+  - Analyzing our HTTP server: 分析HTTP伺服器
+  - Passing functions around: 進行函數傳遞
+  - How function passing makes our HTTP server work: 函數傳遞是如何讓HTTP伺服器工作的
+  - Event-driven asynchronous callbacks: 基於事件驅動的回呼(callback)
+  - How our server handles requests: 伺服器是如何處理請求的
+  - Finding a place for our server module: 伺服器端的模組放在哪裡
+  - What’s needed to ”route” requests?: 如何來進行請求的 "路由"
+  - Execution in the kingdom of verbs: 行為驅動執行
+  - Routing to real request handlers: 路由給真正的請求處理程序
+  - Making the request handlers respond: 讓請求處理程序作出回應
+  - Handling POST requests: 處理POST請求
+  - Handling file uploads: 處理檔案上傳
   - 利用 Mocha 協助開發
 
 - Node.js 進階
   - 基礎 MVC 架構說明
-  - sequelize 資料庫操作
-  - route 定義
-  - jade/pug 使用
-  - Controller 定義
-  - Koa 使用，以使用者增修改查為例
   - Sails 使用，以使用者增修改查為例
+    - sequelize 資料庫操作
+    - Controller 定義
+    - route 定義
+    - jade/pug 使用
+    - 測試撰寫
+  - Koa 使用，以使用者增修改查為例
+
+- [參考資料](./reference/README.md)
