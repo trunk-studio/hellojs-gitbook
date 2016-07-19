@@ -16,3 +16,16 @@
   * [Upstream Pull Request: 跨檔案庫 Pull Request 操作](./vcs/git/upstreamPullRequest/README.md)
   * [編修衝突](vcs/git/conflict/README.md)
   * [fork Upstream 編修衝突](./vcs/git/forkUpstreamConflict/README.md)
+
+- Week2
+  * npm hexo
+  * package.json
+  * Callback
+  * arrow function
+  * let
+  * Promise
+  * async and await
+  * TDD 簡介
+  * sequelize
+  * 實戰：操作 FB API 取得 friends list
+  * 實戰：操作 FB API 對塗鴉牆進行 post
