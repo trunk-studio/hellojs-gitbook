@@ -6,12 +6,6 @@
 - bin字段
 - main字段
 - config字段
-- 其他
-- browser字段
- - engines字段
- - man字段
- - preferGlobal字段
- - style字段
 
 
 ## 概述
@@ -199,29 +193,3 @@ http.createServer(...).listen(process.env.npm_package_config_port)
 ```
 $ npm config set foo:port 80
 ```
-## 其他
-browser字段
-browser指定該模板供瀏覽器使用的版本。 Browserify這樣的瀏覽器打包工具，通過它就知道該打包那個文件。
-```
-"browser": {
-  "tipso": "./node_modules/tipso/src/tipso.js"
-},
-```
-## engines字段
-engines指明了該項目所需要的node.js版本。
-
-## man字段
-man用來指定當前模塊的man文檔的位置。
-```
-"man" :[ "./doc/calc.1" ]
-```
-## preferGlobal字段
-preferGlobal的值是布爾值，表示當用戶不將該模塊安裝為全局模塊時（即不用–global參數），要不要顯示警告，表示該模塊的本意就是安裝為全局模塊。
-
-## style字段
-style指定供瀏覽器使用時，樣式文件所在的位置。樣式文件打包工具parcelify，通過它知道樣式文件的打包位置。
-```
-"style": [
-  "./node_modules/tipso/src/tipso.css"
-]
-``

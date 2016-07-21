@@ -1,10 +1,5 @@
-
-![NPM Logo](npmLogoWithBear.png)
-
-![NPM Logo](feature.jpg)
-
 # 目錄
-- 簡介
+- 概述
 - npm init
 - npm set
 - npm info
@@ -16,18 +11,18 @@
 - 避免系統權限
 - npm update，npm uninstall
 - npm run
-- 參數
-- scripts腳本命令最佳實踐
+
+## 概述
+![NPM Logo](npmLogoWithBear.png)
+npm有兩層含義。一層含義是Node的開放式套件登記和管理系統，網址為npmjs.org。另一層含義是Node默認的套件管理器，是一個命令行下的軟件，用來安裝和管理Node套件。
 
 
-## 簡介
-npm有兩層含義。一層含義是Node的開放式模塊登記和管理系統，網址為npmjs.org。另一層含義是Node默認的模塊管理器，是一個命令行下的軟件，用來安裝和管理Node模塊。
-
+![NPM Logo](feature.jpg)
 npm不需要單獨安裝。在安裝Node的時候，會連帶一起安裝npm。但是，Node附帶的npm可能不是最新版本，最好用下面的命令，更新到最新版本。
 ```
 $ npm install npm@latest -g
 ```
-上面的命令中，@latest表示最新​​版本，-g表示全局安裝。所以，命令的主幹是npm install npm，也就是使用npm安裝自己。之所以可以這樣，是因為npm本身與Node的其他模塊沒有區別。
+上面的命令中，@latest表示最新​​版本，-g表示全域安裝。所以，命令的主幹是npm install npm，也就是使用npm安裝自己。之所以可以這樣，是因為npm本身與Node的其他套件沒有區別。
 
 然後，運行下面的命令，查看各種信息。
 ```
@@ -58,14 +53,14 @@ $ npm set init-author-email 'Your email'
 $ npm set init-author-url 'http://yourdomain.com'
 $ npm set init-license 'MIT'
 ```
-上面命令等於為npm init設置了默認值，以後執行npm init的時候，package.json的作者姓名、郵件、主頁、許可證字段就會自動寫入預設的值。這些信息會存放在用戶主目錄的 ~/.npmrc文件，使得用戶不用每個項目都輸入。如果某個項目有不同的設置，可以針對該項目運行npm config。
+上面命令等於為npm init設置了默認值，以後執行npm init的時候，package.json的作者姓名、郵件、主頁、許可證字段就會自動寫入預設的值。這些信息會存放在用戶主目錄的 ~/.npmrc文件，使得用戶不用每個專案都輸入。如果某個專案有不同的設置，可以針對該專案運行npm config。
 ```
 $ npm set save-exact true
 ```
-上面命令設置加入模塊時，package.json將記錄模塊的確切版本，而不是一個可選的版本範圍。
+上面命令設置加入套件時，package.json將記錄套件的確切版本，而不是一個可選的版本範圍。
 
 ## npm info
-npm info命令可以查看每個模塊的具體信息。比如，查看underscore模塊的信息。
+npm info命令可以查看每個套件的具體信息。比如，查看underscore套件的信息。
 ```
 $ npm info underscore
 { name: 'underscore',
@@ -87,7 +82,7 @@ $ npm info underscore
      'LICENSE' ],
   readmeFilename: 'README.md'}
 ```
-上面命令返回一個JavaScript對象，包含了underscore模塊的詳細信息。這個對象的每個成員，都可以直接從info命令查詢。
+上面命令返回一個JavaScript對象，包含了underscore套件的詳細信息。這個對象的每個成員，都可以直接從info命令查詢。
 ```
 $ npm info underscore description
 JavaScript's functional programming helper library.
@@ -112,26 +107,26 @@ $ npm search node-gyp
 // ...
 ```
 ## npm list
-npm list命令以樹型結構列出當前項目安裝的所有模塊，以及它們依賴的模塊。
+npm list命令以樹型結構列出當前專案安裝的所有套件，以及它們依賴的套件。
 ```
 $ npm list
-加上global參數，會列出全局安裝的模塊。
+加上global參數，會列出全域安裝的套件。
 
 $ npm list -global
-npm list命令也可以列出單個模塊。
+npm list命令也可以列出單個套件。
 
 $ npm list underscore
 ```
 ## npm install
 基本用法
-Node模塊採用npm install命令安裝。
+Node套件採用npm install命令安裝。
 
-每個模塊可以“全局安裝”，也可以“本地安裝”。 “全局安裝”指的是將一個模塊安裝到系統目錄中，各個項目都可以調用。一般來說，全局安裝只適用於工具模塊，比如npm和grunt。 “本地安裝”指的是將一個模塊下載到當前項目的node_modules子目錄，然後只有在項目目錄之中，才能調用這個模塊。
+每個套件可以“全域安裝”，也可以“本地安裝”。 “全域安裝”指的是將一個套件安裝到系統目錄中，各個專案都可以使用。一般來說，全域安裝只適用於工具套件，比如npm和grunt。 “本地安裝”指的是將一個套件下載到當前專案的node_modules子目錄，然後只有在專案目錄之中，才能使用這個套件。
 ```
 # 本地安裝
 $ npm install <package name>
 
-# 全局安裝
+# 全域安裝
 $ sudo npm install -global <package name>
 $ sudo npm install -g <package name>
 npm install也支持直接輸入Github代碼庫地址。
@@ -139,31 +134,31 @@ npm install也支持直接輸入Github代碼庫地址。
 $ npm install git://github.com/package/path.git
 $ npm install git://github.com/package/path.git#0.1.0
 ```
-安裝之前，npm install會先檢查，node_modules目錄之中是否已經存在指定模塊。如果存在，就不再重新安裝了，即使遠程倉庫已經有了一個新版本，也是如此。
+安裝之前，npm install會先檢查，node_modules目錄之中是否已經存在指定套件。如果存在，就不再重新安裝了，即使遠端倉庫已經有了一個新版本，也是如此。
 
-如果你希望，一個模塊不管是否安裝過，npm 都要強制重新安裝，可以使用-f或--force參數。
+如果你希望，一個套件不管是否安裝過，npm 都要強制重新安裝，可以使用-f或--force參數。
 ```
 $ npm install <packageName> --force
 ```
-如果你希望，所有模塊都要強制重新安裝，那就刪除node_modules目錄，重新執行npm install。
+如果你希望，所有套件都要強制重新安裝，那就刪除node_modules目錄，重新執行npm install。
 ```
 $ rm -rf node_modules
 $ npm install
 ```
 ## 安裝不同版本
-install命令總是安裝模塊的最新版本，如果要安裝模塊的特定版本，可以在模塊名後面加上@和版本號。
+install命令總是安裝套件的最新版本，如果要安裝套件的特定版本，可以在套件名後面加上@和版本號。
 ```
 $ npm install sax@latest
 $ npm install sax@0.1.1
 $ npm install sax@">=0.1.0 <0.2.0"
 ```
-如果使用--save-exact參數，會在package.json文件指定安裝模塊的確切版本。
+如果使用--save-exact參數，會在package.json文件指定安裝套件的確切版本。
 ```
 $ npm install readable-stream --save --save-exact
 ```
-install命令可以使用​​不同參數，指定所安裝的模塊屬於哪一種性質的依賴關係，即出現在packages.json文件的哪一項中。
-- –save：模塊名將被添加到dependencies，可以簡化為參數-S。
-- –save-dev: 模塊名將被添加到devDependencies，可以簡化為參數-D。
+install命令可以使用​​不同參數，指定所安裝的套件屬於哪一種性質的依賴關係，即出現在packages.json文件的哪一項中。
+- –save：套件名將被添加到dependencies，可以簡化為參數-S。
+- –save-dev: 套件名將被添加到devDependencies，可以簡化為參數-D。
 
 ```
 $ npm install sax --save
@@ -172,7 +167,7 @@ $ npm install node-tap --save-dev
 $ npm install sax -S
 $ npm install node-tap -D
 ```
-如果要安裝beta版本的模塊，需要使用下面的命令。
+如果要安裝beta版本的套件，需要使用下面的命令。
 
 # 安裝最新的beta版
 ```
@@ -183,19 +178,19 @@ $ npm install <module-name>@beta (latest beta)
 ```
 $ npm install <module-name>@1.3.1-beta.3
 ```
-npm install默認會安裝dependencies字段和devDependencies字段中的所有模塊，如果使用production參數，可以只安裝dependencies字段的模塊。
+npm install默認會安裝dependencies字段和devDependencies字段中的所有套件，如果使用production參數，可以只安裝dependencies字段的套件。
 ```
 $ npm install --production
 # 或者
 $ NODE_ENV=production npm install
 ```
-一旦安裝了某個模塊，就可以在代碼中用require命令調用這個模塊。
+一旦安裝了某個套件，就可以在代碼中用require命令使用這個套件。
 ```
 var backbone = require('backbone')
 console.log(backbone.VERSION)
 ```
 ## 避免系統權限
-默認情況下，Npm全局模塊都安裝在系統目錄（比如/usr/local/lib/），普通用戶沒有寫入權限，需要用到sudo命令。這不是很方便，我們可以在沒有root權限的情況下，安裝全局模塊。
+默認情況下，Npm全域套件都安裝在系統目錄（比如/usr/local/lib/），普通用戶沒有寫入權限，需要用到sudo命令。這不是很方便，我們可以在沒有root權限的情況下，安裝全域套件。
 
 首先，在主目錄下新建配置文件.npmrc，然後在該文件中將prefix變量定義到主目錄下面。
 ```
@@ -205,24 +200,24 @@ prefix = /home/yourUsername/npm
 ```
 $ mkdir ~/npm
 ```
-此後，全局安裝的模塊都會安裝在這個子目錄中，npm也會到~/npm/bin目錄去尋找命令。
+此後，全域安裝的套件都會安裝在這個子目錄中，npm也會到~/npm/bin目錄去尋找命令。
 
 最後，將這個路徑在.bash_profile文件（或.bashrc文件）中加入PATH變量。
 ```
 export PATH=~/npm/bin:$PATH
 ```
 ## npm update，npm uninstall
-npm update命令可以更新本地安裝的模塊。
+npm update命令可以更新本地安裝的套件。
 ```
-# 升級當前項目的指定模塊
+# 升級當前專案的指定套件
 $ npm update [package name]
 
-# 升級全局安裝的模塊
+# 升級全域安裝的套件
 $ npm update -global [package name]
 ```
-它會先到遠程倉庫查詢最新版本，然後查詢本地版本。如果本地版本不存在，或者遠程版本較新，就會安裝。
+它會先到遠端倉庫查詢最新版本，然後查詢本地版本。如果本地版本不存在，或者遠端版本較新，就會安裝。
 
-使用-S或--save參數，可以在安裝的時候更新package.json裡面模塊的版本號。
+使用-S或--save參數，可以在安裝的時候更新package.json裡面套件的版本號。
 ```
 // 更新之前的package.json
 dependencies: {
@@ -234,19 +229,19 @@ dependencies: {
   dep1: "^1.2.2"
 }
 ```
-注意，從npm v2.6.1 開始，npm update只更新頂層模塊，而不更新依賴的依賴，以前版本是遞歸更新的。如果想取到老版本的效果，要使用下面的命令。
+注意，從npm v2.6.1 開始，npm update只更新頂層套件，而不更新依賴的依賴，以前版本是遞歸更新的。如果想取到老版本的效果，要使用下面的命令。
 ```
 $ npm --depth 9999 update
 ```
-npm uninstall命令，卸載已安裝的模塊。
+npm uninstall命令，卸載已安裝的套件。
 ```
 $ npm uninstall [package name]
 
-# 卸載全局模塊
+# 卸載全域套件
 $ npm uninstall [package name] -global
 ```
 ## npm run
-npm不僅可以用於模塊管理，還可以用於執行腳本。 package.json文件有一個scripts字段，可以用於指定腳本命令，供npm直接調用。
+npm不僅可以用於套件管理，還可以用於執行腳本。 package.json文件有一個scripts字段，可以用於指定腳本命令，供npm直接使用。
 ```
 {
   "name": "myproject",
@@ -263,17 +258,17 @@ npm不僅可以用於模塊管理，還可以用於執行腳本。 package.json�
 ```
 上面代碼中，scripts字段指定了兩項命令lint和test。命令行輸入`npm run-script lint`或者`npm run lint`，就會執行`jshint **.js`，輸入`npm run-script test`或者`npm run test`，就會執行`mocha test/`。 `npm run`是`npm run-script`的縮寫，一般都使用前者，但是後者可以更好地反應這個命令的本質。
 
-`npm run`命令會自動在環境變量$PATH添加`node_modules/.bin`目錄，所以scripts字段裡面調用命令時不用加上路徑，這就避免了全局安裝NPM模塊。
+`npm run`命令會自動在環境變量$PATH添加`node_modules/.bin`目錄，所以scripts字段裡面使用命令時不用加上路徑，這就避免了全域安裝NPM套件。
 
 npm內置了兩個命令簡寫，npm test等同於執行npm run test，npm start等同於執行npm run start。
 
-npm run會創建一個Shell，執行指定的命令，並臨時將node_modules/.bin加入PATH變量，這意味著本地模塊可以直接運行。
+npm run會創建一個Shell，執行指定的命令，並臨時將node_modules/.bin加入PATH變量，這意味著本地套件可以直接運行。
 
 舉例來說，你執行ESLint的安裝命令。
 ```
 $ npm i eslint --save-dev
 ```
-運行上面的命令以後，會產生兩個結果。首先，ESLint被安裝到當前目錄的node_modules子目錄；其次，node_modules/.bin目錄會生成一個符號鏈接node_modules/.bin/eslint，指向ESLint模塊的可執行腳本。
+運行上面的命令以後，會產生兩個結果。首先，ESLint被安裝到當前目錄的node_modules子目錄；其次，node_modules/.bin目錄會生成一個符號鏈接node_modules/.bin/eslint，指向ESLint套件的可執行腳本。
 
 然後，你就可以在package.json的script屬性裡面，不帶路徑的引用eslint這個腳本。
 ```
