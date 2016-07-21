@@ -299,3 +299,11 @@ async () => {
     console.log( arthorInfo );
 }
 ```
+
+# DEMO
+  * [postList (callback)](http://localhost:1337/api/dashboard/callback)
+  * [firstPost (callback)](http://localhost:1337/api/firstPost/callback)
+  * [authorOfFirstPost (callback)](http://localhost:1337/api/authOfFirstPost/callback)
+  * [authorOfFirstPost (promise)](http://localhost:1337/api/authOfFirstPost/promise)
+  * [authorOfFirstPost (arrow function)](http://localhost:1337/api/authOfFirstPost/arrow)
+  * [authorOfFirstPost (async and await )](http://localhost:1337/api/authOfFirstPost/async)
