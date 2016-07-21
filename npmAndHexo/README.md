@@ -11,6 +11,7 @@ I'm Kent!
  - 簡介
  - 指令介紹
  - 避免使用 sudo
+
 ## Package.json
   - 概述
   - scripts字段
@@ -19,6 +20,7 @@ I'm Kent!
   - bin字段
   - main字段
   - config字段
+  
 ## hexo 實戰
  - hexo-cli
  - 初始化
