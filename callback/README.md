@@ -22,6 +22,7 @@ Add( 2, function( ans ) {
 ## [JSON](https://zh.wikipedia.org/wiki/JSON) type
 ```JSON
 // get article list
+// http://localhost:1337/api/article
 [
   {
     "id": 1,
@@ -40,7 +41,7 @@ Add( 2, function( ans ) {
 
 ```JSON
 // get article information
-
+// http://localhost:1337/api/articleInfo/1
 {
     "id": 1,
     "authorId": 2,
@@ -50,6 +51,7 @@ Add( 2, function( ans ) {
 
 ```JSON
 // get author information
+// http://localhost:1337/api/author/2
 {
     "id": 2,
     "name": "Deleav",
@@ -74,7 +76,7 @@ function getArticleList( callback ) {
 // get article
 function getArticle( id, callback ) {
     $.ajax({
-        url: "/api/article" + id,
+        url: "/api/articleInfo" + id,
         type: "get"
     }).done(function( article ) {
         callback( article );
@@ -86,11 +88,8 @@ function getArticle( id, callback ) {
 // get author name
 function getAuthor( authorId, callback ) {
     $.ajax({
-        url: "/api/author",
-        type: "post",
-        body: {
-            id: authorId
-        }
+        url: "/api/author/" + authorId,
+        type: "get"
     }).done(function( authorInfo ){
         callback( authorInfo );
     });
@@ -145,7 +144,7 @@ function getArticleList( callback ) {
 // get article
 function getArticle( id, callback ) {
     $.ajax({
-        url: "/api/article/" + id,
+        url: "/api/articleInfo/" + id,
         type: "get"
     }).done(function( article ) {
         callback( article );
@@ -210,7 +209,7 @@ function getArticleList( callback ) {
 function getArticle( id, callback ) {
     return new Promise(function( resolve, reject ) {
         $.ajax({
-            url: "/article/" + id,
+            url: "/articleInfo/" + id,
             type: "get"
         }).done(function( article ) {
             return resolve( article );
@@ -222,11 +221,8 @@ function getArticle( id, callback ) {
 function getAuthor( authorId, callback ) {
     return new Promise(function( resolve, reject ) {
         $.ajax({
-            url: "/author",
-            type: "post",
-            body: {
-                id: authorId
-            }
+            url: "/author/" + authorId,
+            type: "post"
         }).done(function( authorInfo ){
             return resolve( authorInfo );
         });
