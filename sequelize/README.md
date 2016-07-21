@@ -1,5 +1,15 @@
 # [Sequelize](http://docs.sequelizejs.com/en/latest/)
-Sequelize 是一款能控制 PostgreSQL MySQL SQLite 的 ORM ，ORM 簡單來說就是別人封裝好可以直接操做資料庫的工具。
+Sequelize 是一款能控制 PostgreSQL、MySQL、SQLite 的 ORM ，ORM 簡單來說就是別人封裝好可以直接操做資料庫的工具，而不直接使用 SQL 語法對資料庫進行操作。
+這樣有以下優點：
+
+* 開發人員不用管底層使用哪種資料庫，都能使用同樣的程式碼降低程式與資料庫間的耦合
+* ORM 能幫你擋掉大多數的 SQL 注入攻擊 ( SQL Injection )
+* 提高開發效率
+* 方便轉移資料庫，本地測試時能使用 SQLite，正式上線時再轉移成 MySQL
+
+缺點:
+* 效能上的犧牲
+* 在複雜的查詢上 ORM 有可能不支援
 
 ### [Data Type](http://docs.sequelizejs.com/en/latest/docs/models-definition/#data-types)
 ## 開始使用 Sequelize
