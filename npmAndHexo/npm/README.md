@@ -6,9 +6,8 @@
 - npm search
 - npm list
 - npm install
-- 基本用法
 - 安裝不同版本
-- 避免系統權限
+- 避免使用系統權限
 - npm update，npm uninstall
 - npm run
 
