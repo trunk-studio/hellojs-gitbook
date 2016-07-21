@@ -1,5 +1,17 @@
 # Callback
 
+## Example
+```javascript
+function Add( num, callback ) {
+    num = num + 1;
+    callback( num );
+}
+
+Add( 2, function( ans ) {
+    console.log( ans ); // 3
+});
+```
+
 ## Why we need it?
   * 為了防止資料還沒收到就結束程式或回傳參數
   * 最常使用的地方
