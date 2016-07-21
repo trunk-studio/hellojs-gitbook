@@ -25,7 +25,7 @@
   * let
   * Promise
   * async and await
-  * TDD 簡介
+  * [TDD 簡介](./tdd/README.md)
   * sequelize
   * 實戰：操作 FB API 取得 friends list
   * 實戰：操作 FB API 對塗鴉牆進行 post
