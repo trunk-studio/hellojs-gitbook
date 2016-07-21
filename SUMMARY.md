@@ -20,10 +20,10 @@
 - Week2
   * npm hexo
   * package.json
-  * Callback
-  * arrow function
   * let
+  * Callback
   * Promise
+  * arrow function
   * async and await
   * [TDD 簡介](./tdd/README.md)
   * sequelize
