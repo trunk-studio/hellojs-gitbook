@@ -25,7 +25,7 @@
   * Promise
   * arrow function
   * async and await
-  * TDD 簡介
-  * sequelize
+  * [TDD 簡介](./tdd/mocha/README.md)
+  * [sequelize](./sequelize/README.md)
   * 實戰：操作 FB API 取得 friends list
   * 實戰：操作 FB API 對塗鴉牆進行 post
