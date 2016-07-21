@@ -7,7 +7,7 @@
     * call api
     * search DB
 
-## [JSON Type](https://zh.wikipedia.org/wiki/JSON)
+## [JSON](https://zh.wikipedia.org/wiki/JSON) type
 ```JSON
 // get article list
 [
@@ -45,7 +45,7 @@
 }
 ```
 
-## [AJAX](https://zh.wikipedia.org/wiki/AJAX)
+## [AJAX](https://zh.wikipedia.org/wiki/AJAX) function
 ```javascript
 // get article list
 function getArticleList( callback ) {
