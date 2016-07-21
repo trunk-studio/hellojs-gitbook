@@ -99,10 +99,20 @@ $ hexo clean
 
 清除快取檔案或是以產生的靜態檔案
 
-## theme
+## 更換主題
 
+依照要更換主題的文件做指令操作，大多主題直接使用 `git clone` 把主題專案放進自己 Blog
 
+的 `/themes` 中，然後再到外部的 `_config.yml` 下，把原本的主題名稱改成新的即可。
+
+```
+theme: landscape -> 新主題名稱
+```
+
+修改完成，可以使用 `hexo s` 在本地端預覽查看，沒問題就可以用 `hexo d` ，把新主題推到 Github pages 上了。
 
 ## 參考資料
 
 [Hexo 官方文件](https://hexo.io/zh-tw/docs/)
+
+[DMoon大大的 Hexo 文章](http://kyoyadmoon.github.io/blog/2016/02/21/github-blog-build-with-hexo/)
