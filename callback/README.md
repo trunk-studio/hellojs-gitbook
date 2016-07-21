@@ -1,12 +1,13 @@
 # Callback
 
-### Why we need it?
+## Why we need it?
   * 為了防止資料還沒收到就結束程式或回傳參數
   * 最常使用的地方
     * ajax
     * call api
     * search DB
-### [JSON Type](https://zh.wikipedia.org/wiki/JSON)
+
+## [JSON Type](https://zh.wikipedia.org/wiki/JSON)
 ```JSON
 // get article list
 [
@@ -44,7 +45,7 @@
 }
 ```
 
-### [AJAX](https://zh.wikipedia.org/wiki/AJAX)
+## [AJAX](https://zh.wikipedia.org/wiki/AJAX)
 ```javascript
 // get article list
 function getArticleList( callback ) {
@@ -84,7 +85,7 @@ function getAuthor( authorId, callback ) {
 }
 ```
 
-### Get article list
+## Get article list
 ```javascript
 // get article list
 function getArticleList( callback ) {
@@ -118,7 +119,7 @@ getArticleList(function( articleList ) {
 ]
 ```
 
-### Get first article content
+## Get first article content
 ```javascript
 // get article list
 function getArticleList( callback ) {
@@ -157,7 +158,7 @@ getArticleList(function( articleList ) {
 }
 ```
 
-### Get author information
+## Get author information
 ```javascript
 getArticleList(function( articleList ) {
     getArticle(articleList[0].id, function( articleInfo ) {
