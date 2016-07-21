@@ -85,7 +85,7 @@ function getAuthor( authorId, callback ) {
 }
 ```
 
-## Get article list
+## 取得文章列表
 ```javascript
 // get article list
 function getArticleList( callback ) {
@@ -119,7 +119,7 @@ getArticleList(function( articleList ) {
 ]
 ```
 
-## Get first article content
+## 取得第一篇文章的內容
 ```javascript
 // get article list
 function getArticleList( callback ) {
@@ -158,7 +158,7 @@ getArticleList(function( articleList ) {
 }
 ```
 
-## Get author information
+## 取得第一篇文章的作者資訊
 ```javascript
 getArticleList(function( articleList ) {
     getArticle(articleList[0].id, function( articleInfo ) {
