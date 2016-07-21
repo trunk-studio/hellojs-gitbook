@@ -10,4 +10,4 @@
 5. `存取權杖` 會拿到一串亂碼，那就是 token
 6. 在下方 `Get ->/2.7/me`
 7. 下方就能取得 user id 如下圖
-![getId](![getToken](https://github.com/FuYaoDe/hellojs-gitbook/blob/master/facebookApi/img/id.png?raw=true))
+![getId](https://github.com/FuYaoDe/hellojs-gitbook/blob/master/facebookApi/img/id.png?raw=true)
