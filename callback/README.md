@@ -260,6 +260,7 @@ getArticleList().then(function( articleList ) {
 # Arrow function
   * =>
   * http://babeljs.io/repl/
+  
 ```javascript
 // Promise ( ES6 )
 getArticleList().then(function( articleList ) {
@@ -282,6 +283,7 @@ getArticleList()
 # Async and await
   * 一定要用 Promise 包起來才能夠使用
   * 想要用 `await` 一定要加 `async`
+
 ```javascript
 async function() {
     var articleList = await getArticleList();
