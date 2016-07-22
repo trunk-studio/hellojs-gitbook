@@ -18,8 +18,9 @@
   * [fork Upstream 編修衝突](./vcs/git/forkUpstreamConflict/README.md)
 
 - Week2
-  * npm hexo
-  * package.json
+  * [npm](./npmAndHexo/npm/README.md)
+  * [package.json](./npmAndHexo/npm/packagejson/README.md)
+  * [hexo](./npmAndHexo/hexo//README.md)
   * let
   * Callback
   * Promise
