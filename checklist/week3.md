@@ -9,6 +9,7 @@ npm install -g bower
 ```
 
 ```
+cd ~/workspace
 sails new demo
 cd demo
 npm install

@@ -32,5 +32,5 @@
   * 實戰：操作 FB API 取得 friends list
   * 實戰：操作 FB API 對塗鴉牆進行 post
 
-- 行前準備
-  * [第三週](./checklist/week3.md)
+- Week3
+  * [行前準備](./checklist/week3.md)
