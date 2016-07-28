@@ -19,8 +19,7 @@ npm start
     * [postman chrome plugin](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?utm_source=chrome-ntp-icon)
   * 使用 form 表來來送資料
   * touch form.ejs (點兩下)
-  * form
-    * 打開 views/form.ejs
+  * form: 打開 views/form.ejs
 
 ```html
 <h1>使用者新增表單</h1>
