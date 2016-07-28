@@ -1,6 +1,7 @@
+# Socket.io
+  * http://socket.io/
 
-http://socket.io/
-
+```bash
 mkdir chat
 cd chat
 npm init --yes
@@ -9,7 +10,9 @@ npm install --save socket.io
 
 touch index.js
 edit index.js
+```
 
+```javascript
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -26,7 +29,7 @@ io.on('connection', function(socket){
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
-  
+
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
   });
@@ -35,11 +38,14 @@ io.on('connection', function(socket){
 http.listen(process.env.PORT || 3000, function(){
   console.log('listening on *:3000');
 });
+```
 
-
+```bash
 touch index.html
 edit index.html
+```
 
+```html
 <!doctype html>
 <html>
   <head>
@@ -60,7 +66,7 @@ edit index.html
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
-    
+
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
@@ -71,35 +77,23 @@ edit index.html
             $('#m').val('');
             return false;
           });
-          
+
           socket.on('chat message', function(msg){
              $('#messages').append($('<li>').text(msg));
           });
     </script>
-    
+
   </body>
 </html>
+```
 
+  * Publish to heroku
+  * create a project on heroku.com
+  * create a project on github.com
 
-Publish to heroku
-
-create a project on heroku.com
-create a project on github.com
-
-back to koding.com
-
-
-git init 
+```bash
+git init
 git add .
 git commit -m 'update files'
 git push origin master
-
-
-
-
-
-
-
-
-
-
+```
