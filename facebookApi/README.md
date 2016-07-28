@@ -12,7 +12,7 @@
 7. 下方就能取得 user id 如下圖
 ![getId](https://github.com/FuYaoDe/hellojs-gitbook/blob/master/facebookApi/img/id.png?raw=true)
 8. 修改GET的路徑`me/friends?fields=id,name`，按下```ENTER```
-![getFriends](https://github.com/zzpengg/hellojs-gitbook/blob/master/facebookApi/img/friends.png?raw=true)
+![getFriends](https://github.com/zzpengg/hellojs-gitbook/blob/master/facebookApi/img/friend.png?raw=true)
 9. 把取得方式`GET`=>`POST`
 10. 修改路徑`me/feed`
 11. 按下`add a field`
