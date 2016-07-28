@@ -6,20 +6,20 @@
 
 ```javascript
 -------------------------routes.js-------------------------------------
-  '/': {
-    view: 'homepage'
-  },
+'/': {
+  view: 'homepage'
+},
 
-  '/todo' :{
-      view:'todo'
-  }
+'/todo' :{
+    view:'todo'
+}
 -----------------------------------------------------------------------
 ```
   * 記得要存檔  (Crtl+S)
 
 ```html
 ---------------------"views/todo.ejs"--------------------------------
- <h1> todo list</h1>
+<h1> todo list</h1>
 <hr>
 
 <ul></ul>
@@ -98,7 +98,6 @@ $("form").on("submit", function (e) {
 ```javascript
 -----------------------"views/todo.ejs"--------------------------------
 // 底下新增
-
 $("form").on("submit" , function (e) {
     $.post("/task/create",{
         title: $("input[name=title]").val()
@@ -108,7 +107,7 @@ $("form").on("submit" , function (e) {
 
         return false;
     });
-    
+
 // 刪除按鍵
    for(var i=0;i<result.length; i++){
         tempHtml = tempHtml + "<li>"+
@@ -135,6 +134,5 @@ $("form").on("submit" , function (e) {
 ```javascript
 ----------------------------config/models.js--------------------------
   migrate: 'alter'  //保持
-
 ----------------------------------------------------------------------
 ```
