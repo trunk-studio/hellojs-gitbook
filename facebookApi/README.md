@@ -11,3 +11,5 @@
 6. 在下方 `Get ->/2.7/me`
 7. 下方就能取得 user id 如下圖
 ![getId](https://github.com/FuYaoDe/hellojs-gitbook/blob/master/facebookApi/img/id.png?raw=true)
+8. 修改GET的路徑`me/friends?fields=id,name`，按下```ENTER```
+![getFriends](https://github.com/FuYaoDe/hellojs-gitbook/blob/master/facebookApi/img/friends.png?raw=true)
