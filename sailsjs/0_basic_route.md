@@ -136,3 +136,8 @@ $("form").on("submit" , function (e) {
   migrate: 'alter'  //保持
 ----------------------------------------------------------------------
 ```
+
+  * deploy to heroku again (再一次佈署到heroku)
+    * git add .
+    * git commit -m 'update '
+    * git push origin master
