@@ -19,7 +19,7 @@
 
 - Week2
   * [npm](./npmAndHexo/npm/README.md)
-  * [package.json](./npmAndHexo/npm/packagejson/README.md)
+  * [package.json](./npmAndHexo/packagejson/README.md)
   * [hexo](./npmAndHexo/hexo//README.md)
   * let
   * [Callback](./callback/README.md)
