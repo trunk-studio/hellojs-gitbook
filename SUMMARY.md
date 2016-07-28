@@ -31,3 +31,6 @@
   * [實戰: FB API 取得好友名單、在動態牆上 PO 文](./facebookApi/README.md)
   * 實戰：操作 FB API 取得 friends list
   * 實戰：操作 FB API 對塗鴉牆進行 post
+
+- Week3
+  * [行前準備](./checklist/week3.md)
