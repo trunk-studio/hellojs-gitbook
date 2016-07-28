@@ -97,7 +97,7 @@ $("form").on("submit", function (e) {
 
 ```javascript
 -----------------------"views/todo.ejs"--------------------------------
-底下新增
+// 底下新增
 
 $("form").on("submit" , function (e) {
     $.post("/task/create",{
@@ -108,10 +108,8 @@ $("form").on("submit" , function (e) {
 
         return false;
     });
-```
-
-  * 刪除按鍵
-```javascript
+    
+// 刪除按鍵
    for(var i=0;i<result.length; i++){
         tempHtml = tempHtml + "<li>"+
         "<button class='delete'data-id='" +
