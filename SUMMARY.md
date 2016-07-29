@@ -23,7 +23,7 @@
   * [hexo](./npmAndHexo/hexo//README.md)
   * let
   * [Callback](./callback/README.md)
-  * Promise
+  * [Promise](./callback/README.md#promise)
   * arrow function
   * async and await
   * [TDD 簡介](./tdd/mocha/README.md)
