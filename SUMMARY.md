@@ -23,9 +23,9 @@
   * [hexo](./npmAndHexo/hexo//README.md)
   * let
   * [Callback](./callback/README.md)
-  * Promise
-  * arrow function
-  * async and await
+  * [Promise](./callback/README.md#promise)
+  * [arrow function](./callback/README.md#arrow-function)
+  * [async and await](./callback/README.md#async-and-await)
   * [TDD 簡介](./tdd/mocha/README.md)
   * [sequelize](./sequelize/README.md)
   * [實戰: FB API 取得好友名單、在動態牆上 PO 文](./facebookApi/README.md)
