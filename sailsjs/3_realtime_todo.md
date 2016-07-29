@@ -23,7 +23,7 @@
   {{task.title}}
 </li>
 ```
- 
+
 ```html
 <head>
   <!--SCRIPTS-->
@@ -58,8 +58,7 @@ function taskController($scope) {
     <input type="submit" value="加入">
 </form>
 
-<script src="
-https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"> </script>
 
 <script>
