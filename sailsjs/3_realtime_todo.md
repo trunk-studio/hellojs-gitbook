@@ -1,68 +1,48 @@
+# Realtime todo
+### Library and Framework
+  * Games of JavaScript & HTML5
+    * http://browserquest.mozilla.org/    
+    * http://www.playkeepout.com/        
+    * https://developer.cdn.mozilla.net/media/uploads/demos/a/z/azakai/3baf4ad7e600cbda06ec46efec5ec3b8/bananabread_1424465008_demo_package/index.html
+    * http://media.tojicode.com/q3bsp/
+  * Framework
+    * http://pomelo.netease.com/
+    * http://www.createjs.com/
+  * Source code
+    * https://github.com/mozilla/BrowserQuest
 
-how to deploy to heroku
+### introduce angular.js
+  * https://angularjs.org/
+  * https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js
 
-
-https://goo.gl/1WX5yT
-沒有firstApp的朋友們請參考:Sails application for frontend
-
-Games of JavaScript & HTML5
-
-http://browserquest.mozilla.org/    
-http://www.playkeepout.com/        
-https://developer.cdn.mozilla.net/media/uploads/demos/a/z/azakai/3baf4ad7e600cbda06ec46efec5ec3b8/bananabread_1424465008_demo_package/index.html
-http://media.tojicode.com/q3bsp/
-
-Framework
-
-http://pomelo.netease.com/
-http://www.createjs.com/
-
-Source code
-https://github.com/mozilla/BrowserQuest
-
-
-cd firstApp 
-
-
-introduce angular.js
-https://angularjs.org/
-
-
-
-
-https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js
-
-
-   
-    
-    
-    ---------------------------layout-----------------
-    36.   <body ng-app ng-controller="taskController">
-    
-     ---------------------------todo-----------------
-5.        <li ng-repeat="task in tasks">
-          {{task.title}}
-            </li>
-
-90 ~ 92 搬移到41上方
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <!--SCRIPTS END-->
-41.     </head>
-
-
-21.       function taskController($scope) {
-
-        io.socket.on("connect", function () {
-          io.socket.get("/task", function (tasks) {
-            console.log(tasks);
-            $scope.tasks = tasks;
-            $scope.$apply();
-        });
+```html
+---------------------------layout-----------------
+<body ng-app ng-controller="taskController">
+---------------------------todo-------------------
+<li ng-repeat="task in tasks">
+  {{task.title}}
+</li>
+```
+ 
+```html
+<head>
+  <!--SCRIPTS-->
+  <script src="/js/dependencies/sails.io.js"></script>
+  <!--SCRIPTS END-->
+</head>
+```
+```javascript
+function taskController($scope) {
+  io.socket.on("connect", function () {
+    io.socket.get("/task", function (tasks) {
+      console.log(tasks);
+      $scope.tasks = tasks;
+      $scope.$apply();
     });
+  });
 }
-
-
+```
+```html
 <h1>TaS list/h1>
 <hr>
 
@@ -84,14 +64,12 @@ https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
 
 <script>
 function taskController($scope) {
-
-        io.socket.on("connect", function () {
-          io.socket.get("/task", function (tasks) {
-          
-            $scope.tasks = tasks;
-            $scope.$apply();
-        });
+  io.socket.on("connect", function () {
+    io.socket.get("/task", function (tasks) {
+      $scope.tasks = tasks;
+      $scope.$apply();
     });
+  });
 }
 
 
@@ -101,32 +79,32 @@ $("form").on("submit", function (e) {
         title: $("input[name=title]").val()
     },function (result) {
         window.location.reload();
-    })
-    
+    });
+
     return false;
 });
 
 
 </script>
-
-
-
-  ---------------------------todo-----------------
-    <input type="text" ng-model="task" name="title" placeholder="請填入您的大名">
-    <input type="submit" ng-click="submitHandler()" value="Submit">
-
-
-    $scope.submitHandler = function() {
-       io.socket.post("/task", {
-            title: $scope.task
-    }, function (result) {
-        $scope.tasks.push(result);
-        $scope.$apply();
-        })
-    };
-}
-
+```
+```html
+---------------------------todo-----------------
+  <input type="text" ng-model="task" name="title" placeholder="請填入您的大名">
+  <input type="submit" ng-click="submitHandler()" value="Submit">
+```
+```javascript
+$scope.submitHandler = function() {
+  io.socket.post("/task", {
+    title: $scope.task
+  }, function (result) {
+    $scope.tasks.push(result);
+    $scope.$apply();
+  });
+};
+```
+```bash
 ---------------------git hub------------------------
 git add .
 git commit -m 'update file'
 git push origin master
+```

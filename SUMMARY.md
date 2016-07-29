@@ -34,3 +34,9 @@
 
 - Week3
   * [行前準備](./checklist/week3.md)
+  * [sails.js](./sailsjs/0_basic.md)
+    * [basic](./sailsjs/0_basic.md)
+    * [basic route](./sailsjs/0_basic_route.md)
+    * [deploy heroku](./sailsjs/1_deploy_heroku.md)
+    * [realtime concept](./sailsjs/2_realtime_concept.md)
+    * [realtime todo](./sailsjs/3_realtime_todo.md)
