@@ -21,7 +21,7 @@
   * [npm](./npmAndHexo/npm/README.md)
   * [package.json](./npmAndHexo/packagejson/README.md)
   * [hexo](./npmAndHexo/hexo//README.md)
-  * let
+  * [let](let/README.md)
   * [Callback](./callback/README.md)
   * [Promise](./callback/README.md#promise)
   * [arrow function](./callback/README.md#arrow-function)
