@@ -18,7 +18,8 @@ console.log(i);
 
 ### Why?
 
-在 ES6 之前的 ECMAScript 規範中，對於 scope 的定義只有兩種，一為全域活動範圍(global scope)，一為函數活動範圍(function scope)。<br>
+在 ES6 之前的 ECMAScript 規範中，對於 scope 的定義只有兩種，<br>
+一為全域活動範圍(global scope)，一為函數活動範圍(function scope)。<br>
 你每定義一個函數，就會建立一個屬於這個函數的活動範圍；不在函數內的資源就屬於全域活動範圍。<br>
 ECMAScript 並沒有採用區塊即活動範圍的定義。所以像 C 語言那樣的區塊用法，在 JavaScript 中就是錯的。<br>
 
