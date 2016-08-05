@@ -43,7 +43,7 @@ function taskController($scope) {
 }
 ```
 ```html
-<h1>TaS list/h1>
+<h1>TaS list</h1>
 <hr>
 
 <ul>
