@@ -186,7 +186,9 @@ AppRegistry.registerComponent('app2', () => app2);
 
 ##使用Flexbox布局
 
-排版方向，預設是 column
+目標：畫面佈局與分割
+
+* 排版方向，預設是 column
 flexDirection 方向排版比例
 
 將以下加入到render中
@@ -225,10 +227,12 @@ flexDirection 方向排版比例
 	能用的值:flex-start, center, flex-end, stretch
 
 如果只要設定自己元素的排版用alignSelf
-例如:alignSelf:flex-start
-這是設定靠上對齊
 
-畫面中的分割
+例如:alignSelf:flex-start這是設定靠上對齊畫面中的分割
+
+以下範例圖示
+
+![](pic.png)
 
 以下所有程式碼
 
