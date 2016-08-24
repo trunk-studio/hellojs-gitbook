@@ -1,3 +1,39 @@
+##StyleSheet.create
+
+駝峰式的 CSS 屬性名稱
+
+```
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+});
+
+```
+類似CSS的樣式程式碼撰寫方式
+
+##使用樣式
+
+* 單樣式使用方式
+
+	`<View style={styles.container} />`
+
+* 使用多個樣式
+
+	`<View style={[styles.container, style.style2]} />`
+
+	與 Object.assign 相同，若有衝突，右邊優先
+
+* 以條件選擇樣式
+
+	`<View style={[styles.base,this.state.active && styles.active]} />`
+
+	預設執行前項`styles.base`樣式，當後面`this.state.active`狀態改變為true或成立時執行後項`styles.active`的樣式
+
+
 ##樣式變換
 
 目標:按按鈕變換按鈕顏色
