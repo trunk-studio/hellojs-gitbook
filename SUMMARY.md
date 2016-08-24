@@ -42,3 +42,4 @@
     * [realtime todo](./sailsjs/3_realtime_todo.md)
 - Week4
   * [上課用練習](./react/week4_class_example.md)
+  * [Virtual Dom](./react/virtual_dom.md)
