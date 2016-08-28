@@ -44,5 +44,5 @@
   * [上課用練習](./react/week4_class_example.md)
   * [webpack](./webpack/webpack.md)
 - Week5
-  * [browserHistory&hashHistory](./browserhistory_hashhistory.md)
+  * [browserHistory&hashHistory](./browserhistory_hashhistory/browserhistory_hashhistory.md)
 - Week6
