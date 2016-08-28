@@ -53,8 +53,8 @@ this.props.params.name
 
 ### Link
 
-- 在 React 中使用 <a> 沒有意義，會導致整個頁面重載而非 Front-End Routing
-- <Link> 是 <a> 的 React Front-End Routing 版本
+- 在 React 中使用 `<a>` 沒有意義，會導致整個頁面重載而非 Front-End Routing
+- <Link> 是 `<a>` 的 React Front-End Routing 版本
 -  使用 to 來代替 href
 
 ex:

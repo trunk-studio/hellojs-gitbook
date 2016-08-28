@@ -42,5 +42,6 @@
     * [realtime todo](./sailsjs/3_realtime_todo.md)
 - Week4
   * [上課用練習](./react/week4_class_example.md)
+  * [webpack](./webpack/webpack.md)
 - Week5
-  * [上課用練習](./react/week5_class_example.md)
+  * [webpack](./webpack/webpack.md)
