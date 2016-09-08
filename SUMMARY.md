@@ -44,3 +44,5 @@
   * [上課用練習](./react/week4_class_example.md)
 - Week5
   * [上課用練習](./react/week5_class_example.md)
+- Week6
+  * [基本元件](./reactnative/basic_bomponents.md)
