@@ -192,6 +192,7 @@ getArticleList(function( articleList ) {
 # Promise
   * 在 return 值外面包一層 Promise
   * Promise 是個物件，有許多的 method 能夠使用（ ex: then, catch...等 ）
+
 ```javascript
 // get article list
 function getArticleList( callback ) {

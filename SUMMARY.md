@@ -45,3 +45,9 @@
   * [SASS](./SASS/sass.md)
 - Week5
   * [Redux](./redux/redux.md)
+  * [webpack](./webpack/webpack.md)
+- Week5
+  * [上課用練習](./react/week5_class_example.md)
+  * [browserHistory&hashHistory](./browserhistory_hashhistory/ebrowserhistory_hashhistory.md)
+- Week6
+  * [基本元件](./reactnative/basic_bomponents.md)
