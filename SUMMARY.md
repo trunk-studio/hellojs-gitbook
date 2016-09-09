@@ -42,6 +42,11 @@
     * [realtime todo](./sailsjs/3_realtime_todo.md)
 - Week4
   * [上課用練習](./react/week4_class_example.md)
+  * [Virtual Dom](./react/virtual_dom.md)
+- Week5
+  * [上課用練習](./react/week5_class_example.md)
+- Week6
+  * [style](./reactnative/style.md)
   * [SASS](./SASS/sass.md)
 - Week5
   * [Redux](./redux/redux.md)
@@ -51,3 +56,4 @@
   * [browserHistory&hashHistory](./browserhistory_hashhistory/ebrowserhistory_hashhistory.md)
 - Week6
   * [基本元件](./reactnative/basic_bomponents.md)
+>>>>>>> upstream/master
